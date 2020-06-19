@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    Title="            Your Tasks"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:custom="clr-namespace:ManageYourTime;assembly=ManageYourTime"
+    xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             x:Class="ManageYourTime.ShowTasksPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White" >
+            <ListView  x:Name="listview1" ItemSelected="Listview1_ItemSelected" ItemTapped="EditTask">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.ContextActions>
+                                <MenuItem Text="Delete" Clicked="DeleteEmployee" IsDestructive="true" CommandParameter="{Binding .}"/>
+                            </ViewCell.ContextActions>
+                            <StackLayout BackgroundColor="Black" Spacing="5" Padding="7">
+                                <Label Text="{Binding Title}" TextColor="Aqua"  FontSize="Medium" ></Label>
+                                <Label Text="{Binding description}" TextColor="Aqua"  FontSize="Medium" ></Label>
+                                <Label Text="{Binding Date}" TextColor="Aqua" FontSize="Medium" ></Label>
+                            </StackLayout>
+                        </ViewCell>
+                       
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

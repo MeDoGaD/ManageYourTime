@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    NavigationPage.HasNavigationBar="False"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ManageYourTime"
+             x:Class="ManageYourTime.MainPage">
+
+    <Grid BackgroundColor="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+            <RowDefinition Height="0.5*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.25*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="1.25*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="@drawable/pic2" Grid.Row="0" Grid.Column="0" Aspect="Fill"></Image>
+        <Label Text="Manage Your Time" HorizontalTextAlignment="Center" TextColor="Aqua" Grid.Row="0" Grid.Column="1" FontSize="36"></Label>
+        <Image Source="@drawable/pic1" Aspect="Fill" Grid.Row="0" Grid.Column="2" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ></Image>
+        <Label Text="_______________________________________________________" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" TextColor="Aqua"></Label>
+
+        <Button Text="Add Task" CornerRadius="40" FontSize="22" Grid.Row="2" Grid.Column="1" TextColor="Aquamarine" BackgroundColor="Gray" Clicked="Addbtn_Clicked" x:Name="Addbtn"></Button>
+        <Button Text="Today Tasks" CornerRadius="40" FontSize="22" Grid.Row="3" Grid.Column="1" TextColor="Aquamarine" BackgroundColor="Gray" Clicked="todaybtn"></Button>
+        <Button Text="All Tasks" CornerRadius="40" FontSize="22" Grid.Row="4" Grid.Column="1" TextColor="Aquamarine" BackgroundColor="Gray" Clicked="AllTasksbtn"></Button>
+
+        <Button Text="Exit" CornerRadius="30"  TextColor="Aquamarine" BackgroundColor="Gray" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="3" Clicked="Exitbtn"></Button>
+
+    </Grid>
+
+
+</ContentPage>
